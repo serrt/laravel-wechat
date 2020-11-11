@@ -47,7 +47,7 @@ class Wechat extends Model
             ],
         ];
         $app = Factory::officialAccount($config);
-        if ($wechat->type == self::TYPE_MIN){
+        if ($this->type == self::TYPE_MIN){
             $app = Factory::miniProgram($config);
         }
         return $app;

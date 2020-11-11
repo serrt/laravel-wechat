@@ -11,7 +11,7 @@ class WechatController extends Controller
     public function jsConfig(Request $request)
     {
         if ($request->has('id')) {
-            $wechat = $this->getWechat($request->input('id', 1));
+            $wechat = $this->getWechat($request->input('id'));
             $officialAccount = $wechat->getOfficialAccount();
         } else {
             $officialAccount = EasyWeChat::officialAccount();
